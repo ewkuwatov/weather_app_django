@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/static/css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Погода</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="city">Введите город:</label>
+            <input type="text" id="city" name="city">
+            <button type="submit">Далее</button>
+        </form>
+        {% if weather_data %}
+            <h2>Погода в {{ weather_data.name }}, {{ weather_data.sys.country }}</h2>
+            <p>Температура: {{ weather_data.main.temp }}°C</p>
+            <p>Погода: {{ weather_data.weather.0.main }} - {{ weather_data.weather.0.description }}</p>
+            <p>Скорость ветра: {{ weather_data.wind.speed }} m/s</p>
+        {% endif %}
+        {% if currencies %}
+            <h2>Курс Валют:</h2>
+            <ul>
+                {% for currency, rate in currencies.items %}
+                    <li>{{ currency }}: {{ rate }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

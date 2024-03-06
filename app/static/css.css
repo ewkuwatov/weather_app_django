@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Выравнивание по центру */
+}
+
+h1 {
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin-bottom: 20px;
+    display: inline-block; /* Добавим для выравнивания по центру */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+
+    width: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.weather-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block; /* Добавим для выравнивания по центру */
+    text-align: left; /* Выравнивание содержимого по левому краю */
+}
+
+.weather-info h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    color: #666;
+    margin: 5px 0; /* Убираем нижний и верхний отступ */
+}
