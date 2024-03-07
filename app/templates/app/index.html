@@ -21,11 +21,19 @@
             <p>Погода: {{ weather_data.weather.0.main }} - {{ weather_data.weather.0.description }}</p>
             <p>Скорость ветра: {{ weather_data.wind.speed }} m/s</p>
         {% endif %}
+<!--        {% if currencies %}-->
+<!--            <h2>Курс Валют:</h2>-->
+<!--            <ul>-->
+<!--                {% for currency, rate in currencies.items %}-->
+<!--                    <li>{{ currency }}: {{ rate }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
         {% if currencies %}
-            <h2>Курс Валют:</h2>
+            <h2>Курсы валют</h2>
             <ul>
-                {% for currency, rate in currencies.items %}
-                    <li>{{ currency }}: {{ rate }}</li>
+                {% for currency in currencies %}
+                    <li>{{ currency.CcyNm_RU }}: {{ currency.Rate }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
